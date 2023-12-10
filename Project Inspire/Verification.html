@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Verification</title>
+  <style>
+    
+    body {
+      background-image: linear-gradient(135deg, #43837A, #91BBB5);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+      font-family: "Open Sans", sans-serif;
+      color: #333333;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .box-form {
+      margin: 0 auto;
+      background: #FFFFFF;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 0 200px 6px #090b6f85;
+      width: 50%;
+      height: 70%;
+    }
+
+    .box-form .form-group {
+      padding: 15px;
+      overflow: hidden;
+    }
+
+    .box-form label {
+      margin: 10px 0;
+    }
+
+    .box-form input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid #B0B3B9;
+    }
+
+    .box-form button {
+      color: #fff;
+      font-size: 14px;
+      padding: 15px 40px;
+      border-radius: 50px;
+      display: inline-block;
+      border: 0;
+      outline: 0;
+      box-shadow: 0px 4px 30px 0px #91BBB5;
+      background-image: linear-gradient(135deg, #43837A, #91BBB5);
+      margin: 15px;
+    }
+
+    .box-form button.cancel {
+      background-color: #f44336;
+    }
+    .document-verification {
+      font-family: 'Arial', sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background-color: #ebf0ea;
+    }
+
+    .document-verification h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .document-verification p {
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: #666;
+    }
+
+    .document-verification ul {
+      margin-bottom: 20px;
+    }
+    
+    .document-verification .form-group {
+      margin-bottom: 20px;
+    }
+
+    .document-verification label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .document-verification select,
+    .document-verification input {
+      width: 80%;
+      padding: 10px 15px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      margin: auto; 
+    }
+
+    .document-verification button {
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .document-verification button[type="submit"] {
+      background-color: #4CAF50;
+    }
+
+    .document-verification button.cancel {
+      background-color: #f44336;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+<div class="document-verification">
+  <h1>Verify Your Identity</h1>
+  <p>Please upload a photo of your valid ID, a selfie of yourself, and select your ID type and enter your ID number.</p>
+
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <ul>
+        <li>Maximum file size is 5mb</li>
+        <li>Photos must be in PNG,JPG,JPEG,HEIC, Or PDF</li>
+        <li>Make sure your chosen ID is not blurred or cropped</li>
+      </ul>
+      <label for="idType">ID Type:</label>
+      <select id="idType" name="idType" required>
+        <option value="" selected disabled>Select ID Type</option>
+        <option value="driversLicense">Driver's License</option>
+        <option value="passport">Passport</option>
+        <option value="nationalID">National ID</option>
+        <option value="SSS">SSS ID</option>
+        <option value="UMID">UMID ID</option>
+         <option value="PH">Philhealth ID</option>
+        <option value="SCI">Senior Citizen ID</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      
+      <label for="idNumber">ID Number:</label>
+      <input type="text" id="idNumber" name="idNumber" required>
+    </div>
+
+    <div class="form-group">
+      <label for="id_photo">Upload ID Photo:</label>
+      <input type="file" name="id_photo" accept="image/png, image/jpg, image/jpeg, image/heic, application/pdf" id="id_photo" required>
+    </div>
+
+    <div class="form-group">
+      <label for="selfie">Upload Selfie:</label>
+      <input type="file" name="selfie" accept="image/png, image/jpg, image/jpeg, image/heic" id="selfie" required>
+    </div>
+
+    <button type="submit">Submit</button>
+    <button type="button" class="cancel">Cancel</button>
+  </form>
+</div>
+</body>
+</html>

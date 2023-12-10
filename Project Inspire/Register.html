@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Registration Form | CodingLab </title>
+    <link rel="stylesheet" href="styleregister.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+<body>
+  <div class="container">
+    <div aria-labelledby="header" class="title" id="header">Registration</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details" id="name-label">Full Name</span>
+            <input type="text" placeholder="Enter your name" aria-labelledby="name-label" required>
+          </div>
+          <div class="input-box">
+            <span class="details" id="username-label">Username</span>
+            <input type="text" placeholder="Enter your username" aria-labelledby="username-label" required>
+          </div>
+          <div class="input-box">
+            <span class="details" id="email-label">Email</span>
+            <input type="text" placeholder="Enter your email" aria-labelledby="email-label" required>
+          </div>
+          <div class="input-box">
+            <span class="details" id="phone-label">Phone Number</span>
+            <input type="text" placeholder="Enter your number" aria-labelledby="phone-label" required>
+          </div>
+          <div class="input-box">
+            <span class="details" id="password-label">Password</span>
+            <input type="text" placeholder="Enter your password" aria-labelledby="password-label" required>
+          </div>
+          <div class="input-box">
+            <span class="details" id="confirm-pass-label">Confirm Password</span>
+            <input type="text" placeholder="Confirm your password" aria-labelledby="confirm-pass-label" required>
+          </div>
+        </div>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details" id="dob-label">Date of Birth</span>
+            <input type="date" placeholder="YYYY-MM-DD" aria-labelledby="dob-label" required>
+          </div>
+          <div class="input-box">
+            <span class="details" id="country-label">Country</span>
+            <select aria-labelledby="country-label">
+                <option value="United States">United States</option>
+                <option value="Canada">Canada</option>
+                  <option value="Mexico">Mexico</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="France">France</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Japan">Japan</option>
+                  <option value="China">China</option>
+                  <option value="India">India</option>
+                  <option value="Brazil">Brazil</option>
+                  <option value="Brazil">Philippines</option>
+
+              </select>
+            </div>
+        </div>
+        <div class="user-details">
+          <div class="input-box"> 
+          <span class="details" id="city-label">City</span>
+          <input type="text" placeholder="San Francisco, CA" aria-labelledby="city-label" required>
+        </div>
+      <div class="input-box">
+        <span class="details" id="region-label">Region</span>
+        <input type="text" placeholder="California" aria-labelledby="region-label" required>
+      </div>
+      <div class="input-box">
+        <span class="details" id="postalcode-label">Postal Code</span>
+        <input type="text" placeholder="94105" aria-labelledby="postalcode-label" required>
+      </div>
+      <div class="input-box">
+        <span class="details" id="phone2-label">Phone Number</span>
+        <input type="tel" placeholder="(+) " aria-labelledby="phone2-label" required>
+      </div>
+      <div class="gender-details" role="group" aria-labelledby="gender-title">
+        <span id="gender-title">Gender</span>
+        <div class="category">
+          <label for="dot-1">
+            <input type="radio" name="gender" id="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <input type="radio" name="gender" id="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+        </div>
+      </div>
+      <div class="registration-details" role="group" aria-labelledby="registration-title">
+        <span id="registration-title">Registration Type</span>
+        <div class="category">
+          <label for="dot-3">
+            <input type="radio" name="registration-type" id="dot-3">
+            <span class="dot three"></span>
+            <span class="registration">Learner</span>
+          </label>
+          <label for="dot-4">
+            <input type="radio" name="registration-type" id="dot-4">
+            <span class="dot four"></span>
+            <span class="registration">Mentor</span>
+          </label>
+        </div>
+      </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>  
+</body>
+</html>
